@@ -22,6 +22,11 @@ app.get('/{*splat}', (req, res) => {
   res.sendFile(join(distPath, 'index.html'))
 })
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Seedflow CRM running on port ${PORT}`)
-})
+// Plesk/Passenger: export the app instead of listening
+if (typeof PhusionPassenger !== 'undefined') {
+  app.listen('passenger')
+} else {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Seedflow CRM running on port ${PORT}`)
+  })
+}
