@@ -1,6 +1,0 @@
-name,company,email,phone,location,status
-Jan de Vries,TechFlow BV,jan@techflow.nl,+31 6 12345678,Amsterdam,hot_lead
-Maria Bakker,GreenWave Solutions,maria@greenwave.nl,+31 6 87654321,Rotterdam,nurturing
-Peter Jansen,DataPulse,peter@datapulse.io,+31 6 11223344,Utrecht,existing_client
-Sophie van den Berg,CloudNine Labs,sophie@cloudnine.nl,+31 6 55667788,Eindhoven,hot_lead
-Thomas Willems,BrightPath Consulting,thomas@brightpath.nl,+31 6 99887766,Den Haag,stale
