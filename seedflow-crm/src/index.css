@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f8fafb;
+  --color-surface: #f8fafb;
+  --color-surface-dim: #d8dadb;
+  --color-surface-bright: #f8fafb;
+  --color-surface-container: #eceeef;
+  --color-surface-container-low: #f2f4f5;
+  --color-surface-container-high: #e6e8e9;
+  --color-surface-container-highest: #e1e3e4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-variant: #e1e3e4;
+  --color-surface-tint: #006972;
+
+  --color-primary: #00535b;
+  --color-primary-container: #006d77;
+  --color-primary-fixed: #9ff0fb;
+  --color-primary-fixed-dim: #82d3de;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #9becf7;
+  --color-on-primary-fixed: #001f23;
+  --color-on-primary-fixed-variant: #004f56;
+
+  --color-secondary: #50616a;
+  --color-secondary-container: #d0e2ed;
+  --color-secondary-fixed: #d3e5f0;
+  --color-secondary-fixed-dim: #b7c9d3;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #54656e;
+  --color-on-secondary-fixed: #0c1e25;
+  --color-on-secondary-fixed-variant: #384952;
+
+  --color-tertiary: #01544f;
+  --color-tertiary-container: #286d67;
+  --color-tertiary-fixed: #acefe7;
+  --color-tertiary-fixed-dim: #90d3cb;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #a9ece4;
+  --color-on-tertiary-fixed: #00201e;
+  --color-on-tertiary-fixed-variant: #00504b;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-on-background: #191c1d;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #3e494a;
+  --color-outline: #6f797a;
+  --color-outline-variant: #bec8ca;
+  --color-inverse-surface: #2e3132;
+  --color-inverse-on-surface: #eff1f2;
+  --color-inverse-primary: #82d3de;
+
+  --font-family-headline: "Manrope", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+  --font-family-label: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headline);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #bec8ca; border-radius: 10px; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
