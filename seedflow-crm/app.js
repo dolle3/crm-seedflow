@@ -5,7 +5,7 @@ import { dirname, join } from 'path'
 import { existsSync } from 'fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const distPath = join(__dirname, '/')
+const distPath = join(__dirname, 'dist')
 const PORT = process.env.PORT || 3000
 
 
@@ -17,4 +17,10 @@ app.get('/{*splat}', (req, res) => {
   res.sendFile(join(distPath, 'index.html'))
 })
 
-app.listen('passenger')
+if (typeof PhusionPassenger !== 'undefined') {
+  app.listen('passenger')
+} else {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Seedflow CRM running on port ${PORT}`)
+  })
+}
